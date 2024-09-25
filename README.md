@@ -7,7 +7,7 @@ pip3.11 install -r requirements.txt
 
 ## Запуск бота
 ```
-python3.11 run.py
+python3.11 src/main.py
 ```
 
 ## Env переменные 
