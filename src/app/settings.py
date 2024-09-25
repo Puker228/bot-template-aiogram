@@ -12,7 +12,7 @@ class TgBot:
 class Database:
     db_name: str
     db_user: str
-    db_password: str
+    db_pass: str
     db_host: str
     db_port: int
     db_url: str
@@ -35,7 +35,7 @@ def load_config(path: str | None = None) -> Config:
             db_name=env("DB_NAME"),
             db_user=env("DB_USER"),
             db_port=env("DB_PORT"),
-            db_password=env("DB_PASS"),
+            db_pass=env("DB_PASS"),
             db_host=env("DB_HOST"),
             db_url=f"postgresql+asyncpg://{env.str('DB_USER')}:{env.str('DB_PASS')}@{env.str('DB_HOST')}:{env.str('DB_PORT')}/{env.str('DB_NAME')}",
         ),
