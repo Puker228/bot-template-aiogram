@@ -1,7 +1,7 @@
-from typing import List
-
+import os
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
 
 class Settings(BaseSettings):
     DB_HOST: str
@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     DB_PASS: str
     DB_NAME: str
     BOT_TOKEN: str
-    ADMIN_IDS: List[str]
+    ADMIN_IDS: str
 
     @property
     def get_url(self):
@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     def get_user_ids(self):
         return self.ADMIN_IDS
 
-    model_config = SettingsConfigDict(env_file=".env")
-
+    model_config = SettingsConfigDict(env_file=os.path.join(BASE_DIR, ".env"))
 
 settings = Settings()
+
