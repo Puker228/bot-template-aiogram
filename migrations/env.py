@@ -5,11 +5,10 @@ from sqlalchemy import pool
 
 from alembic import context
 
-from src.app.core.base_model import Base
+from src.core import Base
 from src.app.settings import load_config
 
 # models
-from src.app.user.model import User, UserData
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
