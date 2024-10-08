@@ -1,6 +1,6 @@
 from sqlalchemy import select
 
-from src.app.core.database import new_session
+from src.core.database import new_session
 
 
 class BaseCRUD:

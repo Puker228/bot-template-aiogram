@@ -1,7 +1,7 @@
 from sqlalchemy import BIGINT, ForeignKey
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
-from src.app.core.base_model import Base
+from src.core.base_model import Base
 
 
 class User(Base):
